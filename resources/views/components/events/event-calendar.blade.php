@@ -36,7 +36,7 @@
             selectable: {{$selectable}},
             selectHelper: {{$selectable}},
             select: function (event_start, event_end) {
-                var event_name = prompt("Event Name:");
+                var event_name = prompt("Nome do Evento:");
                 if (event_name) {
                     var event_start = $.fullCalendar.formatDate(event_start, "Y-MM-DD HH:mm:ss");
                     var event_end = $.fullCalendar.formatDate(event_end, "Y-MM-DD HH:mm:ss");

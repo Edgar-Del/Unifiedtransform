@@ -8,11 +8,11 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-person-lines-fill"></i> Promote Students
+                        <i class="bi bi-person-lines-fill"></i> Reconfirmar Matrícula
                     </h1>
                     @include('session-messages')
                     <p class="text-danger">
-                        <small><i class="bi bi-exclamation-diamond-fill me-2"></i> Students must be promoted only once to a new Session. Ususally, Admin will create a New Session once Academic activity ends for the Current Session.</small>
+                      {{--  <small><i class="bi bi-exclamation-diamond-fill me-2"></i> Students must be promoted only once to a new Session. Ususally, Admin will create a New Session once Academic activity ends for the Current Session.</small> --}}
                     </p>
                     <div class="mb-4 mt-4">
                         <form action="{{route('promotions.store')}}" method="POST">
@@ -20,13 +20,13 @@
                             <table class="table mt-4">
                                 <thead>
                                     <tr>
-                                        <th scope="col">#ID Card Number</th>
-                                        <th scope="col">First Name</th>
-                                        <th scope="col">Last Name</th>
-                                        <th scope="col">Previous Class</th>
-                                        <th scope="col">Previous Section</th>
-                                        <th scope="col">Promoting to Class</th>
-                                        <th scope="col">Promoting to Section</th>
+                                        <th scope="col">Número de Identificação</th>
+                                        <th scope="col">Primeiro Nome</th>
+                                        <th scope="col">Último Nome</th>
+                                        <th scope="col">Classe Anterior</th>
+                                        <th scope="col">Turma Anterior</th>
+                                        <th scope="col">Transitar para a Classe</th>
+                                        <th scope="col">Confirmar para a Turma</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -59,7 +59,7 @@
                                     @endisset
                                 </tbody>
                             </table>
-                            <button type="submit" class="btn btn-outline-primary mb-3"><i class="bi bi-sort-numeric-up-alt"></i> Promote</button>
+                            <button type="submit" class="btn btn-outline-primary mb-3"><i class="bi bi-sort-numeric-up-alt"></i> Confirmar</button>
                         </form>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
     function getSections(obj, index) {
         var class_id = obj.options[obj.selectedIndex].value;
 
-        var url = "{{route('get.sections.courses.by.classId')}}?class_id=" + class_id 
+        var url = "{{route('get.sections.courses.by.classId')}}?class_id=" + class_id
 
         fetch(url)
         .then((resp) => resp.json())

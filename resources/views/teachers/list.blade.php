@@ -8,24 +8,24 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-person-lines-fill"></i> Teacher List
+                        <i class="bi bi-person-lines-fill"></i> Lista de Professores
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Teacher List</li>
+                            <li class="breadcrumb-item"><a href="{{route('home')}}">Início</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Lista de Professores</li>
                         </ol>
                     </nav>
                     <div class="mb-4 p-3 bg-white border shadow-sm">
                         <table class="table table-responsive">
                             <thead>
                                 <tr>
-                                    <th scope="col">Photo</th>
-                                    <th scope="col">First Name</th>
-                                    <th scope="col">Last Name</th>
+                                    <th scope="col">Foto</th>
+                                    <th scope="col">Primeiro Nome</th>
+                                    <th scope="col">Último Nome</th>
                                     <th scope="col">Email</th>
-                                    <th scope="col">Phone</th>
-                                    <th scope="col">Actions</th>
+                                    <th scope="col">Telefone</th>
+                                    <th scope="col">Acções</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -44,9 +44,9 @@
                                     <td>{{$teacher->phone}}</td>
                                     <td>
                                         <div class="btn-group" role="group">
-                                            <a href="{{url('teachers/view/profile/'.$teacher->id)}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-eye"></i> Profile</a>
+                                            <a href="{{url('teachers/view/profile/'.$teacher->id)}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-eye"></i> Perfil</a>
                                             @can('edit users')
-                                            <a href="{{route('teacher.edit.show', ['id' => $teacher->id])}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-pen"></i> Edit</a>
+                                            <a href="{{route('teacher.edit.show', ['id' => $teacher->id])}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-pen"></i> Editar</a>
                                             @endcan
                                             {{-- <button type="button" class="btn btn-sm btn-primary"><i class="bi bi-trash2"></i> Delete</button> --}}
                                         </div>

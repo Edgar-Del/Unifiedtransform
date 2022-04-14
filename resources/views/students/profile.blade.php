@@ -15,13 +15,13 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-person-lines-fill"></i> Student
+                        <i class="bi bi-person-lines-fill"></i> Estudante
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                          <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
-                          <li class="breadcrumb-item"><a href="{{route('student.list.show')}}">Student List</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Profile</li>
+                          <li class="breadcrumb-item"><a href="{{route('home')}}">Início</a></li>
+                          <li class="breadcrumb-item"><a href="{{route('student.list.show')}}">Lista de Estudantes</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Perfil</li>
                         </ol>
                     </nav>
                     <div class="mb-4">
@@ -40,95 +40,95 @@
                                         <p class="card-text">#ID: {{$promotion_info->id_card_number}}</p>
                                     </div>
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">Gender: {{$student->gender}}</li>
-                                        <li class="list-group-item">Phone: {{$student->phone}}</li>
+                                        <li class="list-group-item">Género: {{$student->gender}}</li>
+                                        <li class="list-group-item">Telefone: {{$student->phone}}</li>
                                         {{-- <li class="list-group-item"><a href="#">View Marks &amp; Results</a></li> --}}
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-sm-8 col-md-9">
                                 <div class="p-3 mb-3 border rounded bg-white">
-                                    <h6>Student Information</h6>
+                                    <h6>DADOS DO ESTUDANTE</h6>
                                     <table class="table table-responsive mt-3">
                                         <tbody>
                                             <tr>
-                                                <th scope="row">First Name:</th>
+                                                <th scope="row">Primeiro Nome:</th>
                                                 <td>{{$student->first_name}}</td>
-                                                <th>Last Name:</th>
+                                                <th>Último Nome:</th>
                                                 <td>{{$student->last_name}}</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">Email:</th>
                                                 <td>{{$student->email}}</td>
-                                                <th>Birthday:</th>
+                                                <th>Data de Nascimento:</th>
                                                 <td>{{$student->birthday}}</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">Nationality:</th>
+                                                <th scope="row">Nationacionalidade:</th>
                                                 <td>{{$student->nationality}}</td>
-                                                <th>Religion:</th>
+                                                <th>Religião:</th>
                                                 <td>{{$student->religion}}</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">Address:</th>
+                                                <th scope="row">Endereço:</th>
                                                 <td>{{$student->address}}</td>
-                                                <th>Address2:</th>
+                                                <th>Morada:</th>
                                                 <td>{{$student->address2}}</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">City:</th>
+                                                <th scope="row">Cidade:</th>
                                                 <td>{{$student->city}}</td>
-                                                <th>Zip:</th>
+                                                <th>Código Postal:</th>
                                                 <td>{{$student->zip}}</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">Blood Type:</th>
+                                                <th scope="row">Grupo de Sangue:</th>
                                                 <td>{{$student->blood_type}}</td>
-                                                <th>Phone:</th>
+                                                <th>Telefone:</th>
                                                 <td>{{$student->phone}}</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">Gender:</th>
+                                                <th scope="row">Género:</th>
                                                 <td colspan="3">{{$student->gender}}</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                                 <div class="p-3 mb-3 border rounded bg-white">
-                                    <h6>Parents' Information</h6>
+                                    <h6>Informação dos Encarregados</h6>
                                     <table class="table table-responsive mt-3">
                                         <tbody>
                                             <tr>
-                                                <th scope="row">Father's Name:</th>
+                                                <th scope="row">Nome do Pai:</th>
                                                 <td>{{$student->parent_info->father_name}}</td>
-                                                <th>Mother's Name:</th>
+                                                <th>Nome da Mãe:</th>
                                                 <td>{{$student->parent_info->mother_name}}</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">Father's Phone:</th>
+                                                <th scope="row">Telefone do Pai:</th>
                                                 <td>{{$student->parent_info->father_phone}}</td>
-                                                <th>Mother's Phone:</th>
+                                                <th>Telefone da Mãe:</th>
                                                 <td>{{$student->parent_info->mother_phone}}</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">Address:</th>
+                                                <th scope="row">Endereço:</th>
                                                 <td colspan="3">{{$student->parent_info->parent_address}}</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                                 <div class="p-3 mb-3 border rounded bg-white">
-                                    <h6>Academic Information</h6>
+                                    <h6>Informação Académica</h6>
                                     <table class="table table-responsive mt-3">
                                         <tbody>
                                             <tr>
                                                 <th scope="row">Class:</th>
                                                 <td>{{$promotion_info->section->schoolClass->class_name}}</td>
-                                                <th>Board Reg. No.:</th>
+                                                <th>Nº de Registo:</th>
                                                 <td>{{$student->academic_info->board_reg_no}}</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">Section:</th>
+                                                <th scope="row">Turma:</th>
                                                 <td colspan="3">{{$promotion_info->section->section_name}}</td>
                                             </tr>
                                         </tbody>

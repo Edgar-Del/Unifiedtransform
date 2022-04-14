@@ -82,7 +82,7 @@
                                     <input type="text" class="form-control" id="inputNationality" name="nationality" placeholder="ex.: Angolano, Namibiano,..." required value="{{old('nationality')}}">
                                 </div>
                                 <div class="col-md-4">
-                                    <label for="inputBloodType" class="form-label">Grupo Sanguíneo<sup><i class="bi bi-asterisk text-primary"></i></sup></label>
+                                    <label for="inputBloodType" class="form-label">Grupo de Sangue<sup><i class="bi bi-asterisk text-primary"></i></sup></label>
                                     <select id="inputBloodType" class="form-select" name="blood_type" required>
                                         <option {{old('blood_type') == 'A+' ? 'selected' : ''}}>A+</option>
                                         <option {{old('blood_type') == 'A-' ? 'selected' : ''}}>A-</option>
