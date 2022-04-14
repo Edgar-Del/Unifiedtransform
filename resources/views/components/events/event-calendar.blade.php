@@ -50,7 +50,7 @@
                         },
                         type: "POST",
                         success: function (data) {
-                            displayMessage("Event created.");
+                            displayMessage("Evento Agendado");
 
                             calendar.fullCalendar('renderEvent', {
                                 id: data.id,
@@ -78,13 +78,13 @@
                     },
                     type: "POST",
                     success: function (response) {
-                        displayMessage("Event updated");
+                        displayMessage("Evento Atualizado com Sucesso!");
                     }
                 });
             },
             eventClick: function (event) {
                 if({{$selectable}}){
-                    var eventDelete = confirm("Are you sure to delete?");
+                    var eventDelete = confirm("Tem certeza que pretende remover?");
                     if (eventDelete) {
                         $.ajax({
                             type: "POST",
@@ -95,7 +95,7 @@
                             },
                             success: function (response) {
                                 calendar.fullCalendar('removeEvents', event.id);
-                                displayMessage("Event removed");
+                                displayMessage("Evento removido!");
                             }
                         });
                     }
@@ -105,7 +105,7 @@
     });
 
     function displayMessage(message) {
-        toastr.success(message, 'Event');            
+        toastr.success(message, 'Event');
     }
 
 </script>
