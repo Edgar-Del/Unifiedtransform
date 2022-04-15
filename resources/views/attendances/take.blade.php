@@ -8,20 +8,20 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-calendar2-week"></i> Take Attendance
+                        <i class="bi bi-calendar2-week"></i> Registar Presença
                     </h1>
 
                     @include('session-messages')
 
                     <h3><i class="bi bi-compass"></i>
-                        Class #{{request()->query('class_name')}}, 
+                        ANO ACADÉMICO: {{request()->query('class_name')}},
                         @if ($academic_setting->attendance_type == 'course')
-                            Course: {{request()->query('course_name')}}
+                            DISCIPLINA: {{request()->query('course_name')}}
                         @else
-                            Section #{{request()->query('section_name')}}
+                            TURMA: {{request()->query('section_name')}}
                         @endif
                     </h3>
-                    <div class="mt-4">Current Date and Time: {{ date('Y-m-d H:i:s') }}</div>
+                    <div class="mt-4">Data: {{ date('Y-m-d H:i:s') }}</div>
                     <div class="row mt-4">
                         <div class="col-10 bg-white border p-3 shadow-sm">
                             <form action="{{route('attendances.store')}}" method="POST">
@@ -38,9 +38,9 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th scope="col"># ID Card Number</th>
-                                            <th scope="col">Student Name</th>
-                                            <th scope="col">Present</th>
+                                            <th scope="col">Número de Identificação</th>
+                                            <th scope="col">Nome do Estudante</th>
+                                            <th scope="col">Presença</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -58,7 +58,7 @@
                                 </table>
                                 @if(count($student_list) > 0 && $attendance_count < 1)
                                 <div class="mb-4">
-                                    <button type="submit" class="btn btn-outline-primary"><i class="bi bi-check2"></i> Submit</button>
+                                    <button type="submit" class="btn btn-outline-primary"><i class="bi bi-check2"></i> Submeter</button>
                                 </div>
                                 @endif
                             </form>

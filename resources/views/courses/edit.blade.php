@@ -28,10 +28,10 @@
                             <div class="mb-3">
                                 <label for="course_type" class="form-label">Tipo de Disciplina</label>
                                 <select class="form-select" id="course_type" name="course_type" aria-label="Course type">
-                                    <option value="Core" {{($course->course_type == 'Core')? 'selected' : ''}}>Complementar</option>
-                                    <option value="General" {{($course->course_type == 'General')? 'selected' : ''}}>General</option>
-                                    <option value="Elective" {{($course->course_type == 'Elective')? 'selected' : ''}}>Elective</option>
-                                    <option value="Optional" {{($course->course_type == 'Optional')? 'selected' : ''}}>Opcional</option>
+                                    <option value="Complementar" {{($course->course_type == 'Complementar')? 'selected' : ''}}>Complementar</option>
+                                    <option value="Geral" {{($course->course_type == 'Geral')? 'selected' : ''}}>Nuclear</option>
+                                    <option value="Electiva" {{($course->course_type == 'Electiva')? 'selected' : ''}}>Electiva</option>
+                                    <option value="Opcional" {{($course->course_type == 'Opcional')? 'selected' : ''}}>Opcional</option>
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-outline-primary"><i class="bi bi-check2"></i> Guardar</button>

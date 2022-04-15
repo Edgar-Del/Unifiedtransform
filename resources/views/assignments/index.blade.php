@@ -8,13 +8,13 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-journal-medical"></i> Assignments
+                        <i class="bi bi-journal-medical"></i> Tarefas
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
-                            <li class="breadcrumb-item"><a href="{{url()->previous()}}">Courses</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+                            <li class="breadcrumb-item"><a href="{{route('home')}}">Início</a></li>
+                            <li class="breadcrumb-item"><a href="{{url()->previous()}}">Disciplinas</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Tarefas</li>
                         </ol>
                     </nav>
                     <div class="mb-4 mt-4">
@@ -22,8 +22,8 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Assignment Name</th>
-                                        <th scope="col">Actions</th>
+                                        <th scope="col">Tarefa</th>
+                                        <th scope="col">Acções</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -32,7 +32,7 @@
                                             <td>{{$assignment->assignment_name}}</td>
                                             <td>
                                                 <div class="btn-group" role="group">
-                                                    <a href="{{asset('storage/'.$assignment->assignment_file_path)}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i> Download</a>
+                                                    <a href="{{asset('storage/'.$assignment->assignment_file_path)}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i> Baixar</a>
                                                 </div>
                                             </td>
                                         </tr>

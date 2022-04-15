@@ -8,22 +8,22 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-cloud-sun"></i> Course Marks
+                        <i class="bi bi-cloud-sun"></i> Notas por Disciplina
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
-                            <li class="breadcrumb-item"><a href="{{url()->previous()}}">My Courses</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Course Marks</li>
+                            <li class="breadcrumb-item"><a href="{{route('home')}}">Início</a></li>
+                            <li class="breadcrumb-item"><a href="{{url()->previous()}}">Minhas Disciplinas</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Notas por Disciplina</li>
                         </ol>
                     </nav>
-                    <h5>Course: {{$course_name}}</h5>
+                    <h5>Disciplina: {{$course_name}}</h5>
                     <div class="mb-4 mt-4 p-3 bg-white border shadow-sm">
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">Exam Name</th>
-                                    <th scope="col">Marks</th>
+                                    <th scope="col">Prova</th>
+                                    <th scope="col">Nota</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -43,9 +43,9 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">Total Marks</th>
-                                    <th scope="col">Grade Points</th>
-                                    <th scope="col">Grade</th>
+                                    <th scope="col">Total Pontos</th>
+                                    <th scope="col">Avaliações</th>
+                                    <th scope="col">Nota Final</th>
                                 </tr>
                             </thead>
                             <tbody>

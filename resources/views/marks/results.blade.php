@@ -8,7 +8,7 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-cloud-sun"></i> View Results
+                        <i class="bi bi-cloud-sun"></i> Consultar Notas
                     </h1>
                     <h6>Filter list by:</h6>
                     <div class="mb-4 mt-4">
@@ -26,7 +26,7 @@
                                 <div class="col">
                                     <select onchange="getSectionsAndCourses(this);" class="form-select" name="class_id" aria-label="Class">
                                         @isset($classes)
-                                            <option selected disabled>Please select a class</option>
+                                            <option selected disabled>Classe</option>
                                             @foreach ($classes as $school_class)
                                                 <option value="{{$school_class->id}}">{{$school_class->class_name}}</option>
                                             @endforeach
@@ -42,7 +42,7 @@
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <button type="submit" class="btn btn-primary"><i class="bi bi-arrow-counterclockwise"></i> Load List</button>
+                                    <button type="submit" class="btn btn-primary"><i class="bi bi-arrow-counterclockwise"></i>Actualizar</button>
                                 </div>
                             </div>
                         </form>
@@ -50,11 +50,11 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Photo</th>
-                                        <th scope="col">Student Name</th>
-                                        <th scope="col">Total Marks</th>
-                                        <th scope="col">Grade Points</th>
-                                        <th scope="col">Grade</th>
+                                        <th scope="col">Foto</th>
+                                        <th scope="col">Nome do Estudante</th>
+                                        <th scope="col">Total de Pontos</th>
+                                        <th scope="col">Avaliaçoes</th>
+                                        <th scope="col">Nota Final</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -83,7 +83,7 @@
     function getSectionsAndCourses(obj) {
         var class_id = obj.options[obj.selectedIndex].value;
 
-        var url = "{{route('get.sections.courses.by.classId')}}?class_id=" + class_id 
+        var url = "{{route('get.sections.courses.by.classId')}}?class_id=" + class_id
 
         fetch(url)
         .then((resp) => resp.json())

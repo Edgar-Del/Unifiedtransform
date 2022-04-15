@@ -45,11 +45,11 @@
                                     <div class="mt-2">
                                         <p>Dia da Semana<sup><i class="bi bi-asterisk text-primary"></i></sup></p>
                                         <select class="form-select" id="course-select" name="weekday" required>
-                                            <option value="1">Monday</option>
-                                            <option value="2">Tuesday</option>
-                                            <option value="3">Wednesday</option>
-                                            <option value="4">Thursday</option>
-                                            <option value="5">Friday</option>
+                                            <option value="1">Segunda-Feira</option>
+                                            <option value="2">Terça-Feira</option>
+                                            <option value="3">Quarta-Feira</option>
+                                            <option value="4">Quinta-Feira</option>
+                                            <option value="5">Sexta-Feira</option>
                                         </select>
                                     </div>
                                     <div class="mt-2">
